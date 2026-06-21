@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sweet Somethings · Small-Batch Home Bakery · Made with Love</title>
+<meta name="description" content="Sweet Somethings is Ashley's small-batch home bakery. Cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked from scratch with real ingredients — follow on Instagram for where and when to shop in person." />
+
+<!-- ===== Favicons (cookie icon from the Sweet Somethings logo) ===== -->
+<link rel="icon" href="favicon.ico" sizes="48x48" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#FDF6EC" />
+
+<!-- ===== Link previews for SMS / iMessage / social (Open Graph) =====
+     IMPORTANT: og:image and og:url must be FULL absolute URLs.
+     After you enable GitHub Pages, replace YOUR-USERNAME (and the repo
+     name if different) in the two lines marked below. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sweet Somethings" />
+<meta property="og:title" content="Sweet Somethings · Small-Batch Home Bakery" />
+<meta property="og:description" content="Cinnamon rolls, chocolate chip cookies & lemon crinkle cookies baked from scratch in small batches by Ashley. Made with love — follow on Instagram for market times and locations." />
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/sweet-somethings/" /><!-- UPDATE ME -->
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/sweet-somethings/og-image.png" /><!-- UPDATE ME -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Sweet Somethings — Made with Love. Watercolor logo with a cupcake, mixing bowl, and chocolate chip cookie." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sweet Somethings · Small-Batch Home Bakery" />
+<meta name="twitter:description" content="Cinnamon rolls, chocolate chip cookies & lemon crinkle cookies baked from scratch in small batches. Made with love ♡" />
+<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/sweet-somethings/og-image.png" /><!-- UPDATE ME -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#FDF6EC; --paper:#FBF1E2; --navy:#6A4E3B; --navy-soft:#8A6D59;
+    --blush:#F2A0A6; --blush-soft:#FAD8DA; --sage:#9FB07E; --sage-soft:#E4EAD3;
+    --brown:#8A5A33; --butter:#E9C98F; --ink:#4A3A2C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:'Quicksand',sans-serif;color:var(--ink);
+    background:var(--cream);line-height:1.6;
+  }
+  .script{font-family:'Dancing Script',cursive;font-weight:700;color:var(--navy);line-height:1.05}
+  .hand{font-family:'Caveat',cursive}
+  a{color:var(--navy)}
+  .eyebrow{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--brown)}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+  section{padding:72px 0}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(253,246,236,.94);
+    backdrop-filter:blur(6px);border-bottom:1.5px solid var(--butter);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 22px;max-width:1020px;margin:0 auto}
+  .nav-brand{font-family:'Dancing Script',cursive;font-weight:700;font-size:1.5rem;color:var(--navy);text-decoration:none}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .nav-links a{font-size:.85rem;font-weight:700;text-decoration:none;color:var(--navy-soft)}
+  .nav-links a:hover{color:var(--brown)}
+  .nav-cta{background:var(--navy);color:var(--cream)!important;border-radius:999px;padding:8px 18px}
+  .nav-cta:hover{background:var(--navy-soft)}
+  @media(max-width:680px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:84px 22px 64px;text-align:center;position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(3rem,8vw,5.2rem)}
+  .hero .tagline-ribbon{
+    display:inline-block;margin-top:18px;background:var(--blush-soft);
+    color:var(--navy);font-weight:700;letter-spacing:.14em;font-size:.85rem;
+    padding:8px 26px;border-radius:999px;text-transform:uppercase;
+  }
+  .hero p.lead{max-width:560px;margin:22px auto 0;font-size:1.05rem;font-weight:500;color:var(--navy-soft)}
+  .hero .ctas{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;border-radius:999px;padding:13px 30px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .15s ease, background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--navy);color:var(--cream)}
+  .btn-primary:hover{background:var(--navy-soft)}
+  .btn-ghost{border:2px solid var(--blush);color:var(--brown);background:#fff}
+  .float-heart{position:absolute;opacity:.85}
+  .sprig-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+  .sprig-row span{font-size:.7rem;letter-spacing:.24em;font-weight:700;color:var(--brown)}
+
+  /* ---------- Icing divider ---------- */
+  .icing{display:block;width:100%;height:34px}
+
+  /* ---------- Badge strip ---------- */
+  .badges{background:var(--sage-soft);padding:26px 0}
+  .badge-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px}
+  .badge{display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:700;color:var(--ink);letter-spacing:.05em;text-transform:uppercase}
+
+  /* ---------- Section headers ---------- */
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3rem)}
+  .sec-head p{max-width:520px;margin:10px auto 0;color:var(--navy-soft);font-weight:500}
+
+  /* ---------- Menu cards ---------- */
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+  .bake-card{
+    background:#fff;border:1.5px solid var(--butter);border-radius:20px;
+    padding:28px 24px;text-align:center;box-shadow:0 8px 22px rgba(60,40,20,.07);
+    transition:transform .15s ease;
+  }
+  .bake-card:hover{transform:translateY(-4px)}
+  .bake-card .doodle{margin:0 auto 14px}
+  .bake-card h3{color:var(--navy);font-size:1.15rem;margin-bottom:4px}
+  .bake-card .hand{font-size:1.15rem;color:var(--brown)}
+  .bake-card ul{list-style:none;margin-top:14px;text-align:left;font-size:.88rem;font-weight:500}
+  .bake-card li{padding:5px 0;display:flex;gap:8px;align-items:flex-start}
+  .bake-card li svg{flex-shrink:0;margin-top:4px}
+  .bake-card .pill{display:inline-block;margin-top:16px;background:var(--blush-soft);color:var(--brown);font-size:.72rem;font-weight:700;letter-spacing:.1em;border-radius:999px;padding:5px 14px;text-transform:uppercase}
+
+  /* ---------- About ---------- */
+  .about{background:var(--paper)}
+  .about-grid{display:grid;grid-template-columns:7fr 3fr;gap:28px;align-items:start}
+  .about-text{max-width:none}
+  .about-media{display:flex;justify-content:center;padding-top:32px}
+  .about-side-image{
+    display:block;
+    width:100%;
+    max-width:210px;
+    height:auto;
+    margin:0 auto;
+  }
+  .about h2{font-size:clamp(2rem,4.5vw,2.6rem);margin-bottom:14px}
+  .about p{font-weight:500;color:var(--ink);margin-bottom:14px}
+  .about .script{color:var(--brown)}
+  .about .hand{font-size:1.4rem;color:var(--brown)}
+  @media(max-width:760px){
+    .about-grid{grid-template-columns:1fr;text-align:left}
+    .about-media{padding-top:0}
+    .about-side-image{
+      margin:10px auto 0;
+      width:100%;
+      max-width:140px;
+    }
+  }
+
+  /* ---------- Values ---------- */
+  .values-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:760px;margin:0 auto}
+  .value{
+    background:#fff;border:1.5px dashed var(--butter);border-radius:16px;padding:22px 20px;
+  }
+  .value h3{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .value p{font-size:.88rem;font-weight:500;color:var(--ink)}
+  @media(max-width:620px){.values-grid{grid-template-columns:1fr;max-width:420px}}
+
+  /* ---------- Find Us ---------- */
+  .findus{background:var(--navy);color:var(--cream);text-align:center}
+  .findus h2{color:var(--cream);font-size:clamp(2.2rem,5vw,3rem)}
+  .findus p.sub{color:var(--blush-soft);max-width:520px;margin:12px auto 0;font-weight:500}
+  .findus a{color:var(--butter);text-decoration:underline;text-underline-offset:3px}
+  .findus a:hover{color:var(--cream)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;max-width:760px;margin:38px auto 0}
+  .step{background:rgba(253,246,236,.07);border:1.5px solid rgba(233,201,143,.4);border-radius:16px;padding:24px 18px}
+  .step .num{
+    width:38px;height:38px;border-radius:50%;background:var(--blush);color:var(--navy);
+    font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.05rem;
+  }
+  .step h3{font-size:.95rem;margin-bottom:6px;color:var(--cream)}
+  .step p{font-size:.85rem;color:var(--blush-soft);font-weight:500}
+  .findus .hand{color:var(--butter);font-size:1.35rem;display:block;margin-top:30px}
+
+  /* ---------- Friday banner ---------- */
+  .friday{background:var(--blush-soft);padding:34px 0;text-align:center}
+  .friday .script{font-size:1.9rem}
+  .friday p{font-weight:600;color:var(--brown);font-size:.92rem;margin-top:4px}
+
+  /* ---------- Tips & pairings ---------- */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:720px){.two-col{grid-template-columns:1fr}}
+  .panel{background:#fff;border:1.5px solid var(--butter);border-radius:20px;padding:28px;box-shadow:0 8px 22px rgba(60,40,20,.06)}
+  .panel h3{color:var(--navy);font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .panel ul{list-style:none}
+  .panel li{padding:7px 0;font-size:.92rem;font-weight:500;display:flex;gap:10px;align-items:flex-start}
+  .panel li svg{flex-shrink:0;margin-top:4px}
+  .pairing{display:flex;justify-content:space-between;border-bottom:1.5px dashed var(--sage-soft);padding:9px 0!important}
+  .pairing:last-child{border-bottom:none}
+  .pairing em{font-style:normal;color:var(--brown);font-weight:700}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--paper);border-top:1.5px solid var(--butter);padding:56px 22px 40px;text-align:center}
+  .note{
+    max-width:560px;margin:0 auto;background:#fff;border:1.5px solid var(--blush-soft);
+    border-radius:20px;padding:30px 30px 26px;box-shadow:0 8px 22px rgba(60,40,20,.06);
+  }
+  .note .hand{font-size:1.25rem;color:var(--ink)}
+  .note .sig{font-family:'Dancing Script',cursive;font-weight:700;font-size:1.5rem;color:var(--brown);margin-top:12px}
+  .foot-meta{margin-top:30px;font-size:.8rem;font-weight:600;color:var(--navy-soft)}
+  .foot-tag{margin-top:10px;font-size:.72rem;letter-spacing:.24em;font-weight:700;color:var(--brown);text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Sweet Somethings</a>
+    <div class="nav-links">
+      <a href="#bakes">This Week's Bakes</a>
+      <a href="#about">Meet Ashley</a>
+      <a href="#why">Why We Bake</a>
+      <a href="https://www.instagram.com/sweetsomethingsbaking" class="nav-cta" target="_blank" rel="noopener noreferrer">Find Us ♡</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <svg class="float-heart" style="top:60px;left:12%" width="26" height="26" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>
+  <svg class="float-heart" style="top:130px;right:14%" width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#FAD8DA"/></svg>
+
+  <h1 class="script">Sweet Somethings</h1>
+  <div class="sprig-row">
+    <svg width="64" height="22" viewBox="0 0 100 35"><path d="M2 28 Q50 18 98 8" stroke="#9FB07E" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="15" cy="26" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-22 15 24)"/><ellipse cx="32" cy="22" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-24 32 20)"/><ellipse cx="49" cy="18" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-26 49 16)"/><ellipse cx="66" cy="14" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-28 66 12)"/><ellipse cx="82" cy="10" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-30 82 8)"/></svg>
+    <span>Made with love</span>
+    <svg width="64" height="22" viewBox="0 0 100 35" style="transform:scaleX(-1)"><path d="M2 28 Q50 18 98 8" stroke="#9FB07E" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="15" cy="26" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-22 15 24)"/><ellipse cx="32" cy="22" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-24 32 20)"/><ellipse cx="49" cy="18" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-26 49 16)"/><ellipse cx="66" cy="14" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-28 66 12)"/><ellipse cx="82" cy="10" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-30 82 8)"/></svg>
+  </div>
+  <div class="tagline-ribbon">Made from scratch · Made with love</div>
+  <p class="lead">A tiny home bakery run by Ashley in the hours after her day job. Cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked in small batches with real ingredients — for friends, family, and friendly faces.</p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="https://www.instagram.com/sweetsomethingsbaking" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+    <a class="btn btn-ghost" href="#bakes">See what's baking</a>
+  </div>
+</header>
+
+<!-- piped icing divider -->
+<svg class="icing" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 0 H1200 V10 Q1185 34 1170 10 Q1155 34 1140 10 Q1125 34 1110 10 Q1095 34 1080 10 Q1065 34 1050 10 Q1035 34 1020 10 Q1005 34 990 10 Q975 34 960 10 Q945 34 930 10 Q915 34 900 10 Q885 34 870 10 Q855 34 840 10 Q825 34 810 10 Q795 34 780 10 Q765 34 750 10 Q735 34 720 10 Q705 34 690 10 Q675 34 660 10 Q645 34 630 10 Q615 34 600 10 Q585 34 570 10 Q555 34 540 10 Q525 34 510 10 Q495 34 480 10 Q465 34 450 10 Q435 34 420 10 Q405 34 390 10 Q375 34 360 10 Q345 34 330 10 Q315 34 300 10 Q285 34 270 10 Q255 34 240 10 Q225 34 210 10 Q195 34 180 10 Q165 34 150 10 Q135 34 120 10 Q105 34 90 10 Q75 34 60 10 Q45 34 30 10 Q15 34 0 10 Z" fill="#FDF6EC" style="filter:drop-shadow(0 3px 3px rgba(60,40,20,.06))"/>
+</svg>
+
+<!-- ============ BADGES ============ -->
+<div class="badges">
+  <div class="wrap badge-row">
+    <div class="badge"><svg width="18" height="18" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="5" fill="#9FB07E" transform="rotate(-30 12 12)"/></svg>Made from scratch</div>
+    <div class="badge"><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8A5A33" stroke-width="2.5"/><circle cx="9" cy="10" r="1.8" fill="#8A5A33"/><circle cx="15" cy="13" r="1.8" fill="#8A5A33"/><circle cx="11" cy="16" r="1.8" fill="#8A5A33"/></svg>Real ingredients</div>
+    <div class="badge"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Good for you</div>
+  </div>
+</div>
+
+<!-- ============ THIS WEEK'S BAKES ============ -->
+<section id="bakes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Small batches · Baked fresh</div>
+      <h2 class="script">This Week's Bakes</h2>
+      <p>Everything is mixed, baked, and boxed by hand in small batches. When a batch is claimed, it's gone — so don't be shy!</p>
+    </div>
+    <div class="menu-grid">
+
+      <article class="bake-card">
+        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#D9A45F"/><circle cx="30" cy="30" r="26" fill="none" stroke="#B27C3E" stroke-width="2.5"/><circle cx="20" cy="22" r="3.6" fill="#6B4226"/><circle cx="38" cy="18" r="3.6" fill="#6B4226"/><circle cx="42" cy="34" r="3.6" fill="#6B4226"/><circle cx="27" cy="38" r="3.6" fill="#6B4226"/><circle cx="16" cy="36" r="3.6" fill="#6B4226"/><circle cx="33" cy="27" r="3.6" fill="#6B4226"/></svg>
+        <h3>Chocolate Chip Cookies</h3>
+        <div class="hand">crispy edges, soft centers, totally irresistible</div>
+        <ul>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Butter browned until golden &amp; nutty</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Dough rested for deeper flavor</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Semi-sweet chips &amp; a pinch of sea salt</li>
+        </ul>
+        <span class="pill">Customer favorite</span>
+      </article>
+
+      <article class="bake-card">
+        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25.5" fill="#EFCF6A"/><circle cx="30" cy="30" r="25.5" fill="none" stroke="#C49A45" stroke-width="2.4"/><path d="M16 22 q3 -4 9 -2 q5 2 8 -1 q4 -4 10 -2" stroke="#B9883C" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M14 33 q5 -3 10 0 q6 3 11 0 q5 -3 11 1" stroke="#B9883C" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M19 41 q5 2 10 0 q7 -3 13 1" stroke="#B9883C" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M24 16 q1 3 -2 5" stroke="#B9883C" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M39 14 q-2 3 1 6" stroke="#B9883C" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M17 18 q3 -2 6 0 q2 1 4 -1 q3 -3 6 0 q2 2 5 0 q3 -3 6 0" stroke="#FFF8EE" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M13 29 q3 -2 6 0 q3 2 6 0 q3 -2 6 0 q3 2 6 0 q3 -2 6 0 q3 2 6 0" stroke="#FFF8EE" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M17 39 q4 -2 7 0 q3 2 7 0 q4 -2 7 0 q4 2 8 0" stroke="#FFF8EE" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+        <h3>Lemon Crinkle Cookies</h3>
+        <div class="hand">bright citrus flavor with soft, crackly tops</div>
+        <ul>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Fresh lemon zest and juice in every batch</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Rolled in sugar for signature crinkles</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Soft centers with a bright finish</li>
+        </ul>
+        <span class="pill">Citrus favorite</span>
+      </article>
+
+      <article class="bake-card">
+        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><ellipse cx="30" cy="33" rx="22" ry="17" fill="#E7C08A"/><ellipse cx="30" cy="33" rx="22" ry="17" fill="none" stroke="#B27C3E" stroke-width="2.2"/><path d="M15 33 C15 25, 24 20, 31 22 C38 24, 42 29, 39 35 C36 41, 28 42, 23 39 C18 36, 18 30, 23 27 C27 24, 33 25, 34 30 C35 34, 31 36, 28 34" fill="none" stroke="#9D6430" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 31 C26 29, 29 29, 30 31 C31 33, 29 35, 27 34" fill="none" stroke="#9D6430" stroke-width="1.6" stroke-linecap="round"/><path d="M14 27 q5 -4 10 -1 q5 3 10 0 q5 -3 11 1 q4 3 9 1" stroke="#F7EFE4" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M12 36 q5 -3 10 0 q5 3 10 0 q5 -3 11 1 q4 3 10 0" stroke="#F7EFE4" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+        <h3>Cinnamon Rolls</h3>
+        <div class="hand">soft, swirly, and coated with cinnamon sugar</div>
+        <ul>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Hand-rolled spirals with cinnamon sugar filling</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Soft interior with lightly golden edges</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Finished with vanilla glaze</li>
+        </ul>
+        <span class="pill">Freshly rolled</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <div class="eyebrow">A little about us</div>
+      <h2 class="script">Hi, I'm Ashley!</h2>
+      <p>A sweet treat lover transforming my kitchen into an Arizona cottage bakery. Sweet Somethings started with batches for friends and family, and it's growing one dessert at a time.</p>
+      <p>I believe the little somethings create the sweetest moments. Everything is baked from scratch with real, simple ingredients.</p>
+      <div class="hand">Baking is my happy place — and I'm so glad you're here ♡</div>
+    </div>
+    <div class="about-media">
+      <img class="about-side-image" src="gem-zimage-6.png" alt="Sweet Somethings baked dessert" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY WE BAKE ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Simple ingredients · Big heart</div>
+      <h2 class="script">Why We Bake</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value">
+        <h3><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Bring people together</h3>
+        <p>Good food builds strong communities — and warm cookies build fast friendships.</p>
+      </div>
+      <div class="value">
+        <h3><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#E9C98F"/><circle cx="9" cy="10" r="1.8" fill="#6B4226"/><circle cx="15" cy="13" r="1.8" fill="#6B4226"/><circle cx="11" cy="16" r="1.8" fill="#6B4226"/></svg>Real ingredients</h3>
+        <p>No shortcuts. Ever. If we wouldn't serve it to family, we won't sell it to you.</p>
+      </div>
+      <div class="value">
+        <h3><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#22395B"/></svg>Memorable moments</h3>
+        <p>Life is sweeter when we slow down and savor it — preferably with crumbs involved.</p>
+      </div>
+      <div class="value">
+        <h3><svg width="16" height="16" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="3" fill="#E9C98F" stroke="#8A5A33" stroke-width="1.5"/><circle cx="12" cy="9" r="1.2" fill="#8A5A33"/><circle cx="12" cy="13" r="1.2" fill="#8A5A33"/></svg>Inspired by community</h3>
+        <p>Fueled by our wonderful customers — and a healthy amount of good coffee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="findus" id="find">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#E9C98F">Small batches — they go fast!</div>
+    <h2 class="script">Where to Find Us</h2>
+    <p class="sub">Sweet Somethings lives on <a href="https://www.instagram.com/sweetsomethingsbaking" target="_blank" rel="noopener noreferrer">Instagram</a>. Ashley posts what she'll have available, where she'll be, and when to stop by to shop in person.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Follow along</h3>
+        <p><a href="https://www.instagram.com/sweetsomethingsbaking" target="_blank" rel="noopener noreferrer">Follow Instagram</a> for weekly menus, market dates, and location updates.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Check the details 📍</h3>
+        <p>Look for the posted menu, time, and market spot for that week's bake drop.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Visit in person</h3>
+        <p>Come by (usually at a farmers market) and purchase your favorites directly from Ashley.</p>
+      </div>
+    </div>
+    <span class="hand">every box is packed with intention, gratitude, and a whole lot of heart</span>
+  </div>
+</section>
+
+<!-- ============ FRIDAY BANNER ============ -->
+<div class="friday">
+  <div class="script">Fresh Batch Friday</div>
+  <p>Every week: cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked fresh with care. Follow Instagram for this week's location and time, then come by before sellout.</p>
+</div>
+
+<!-- ============ TIPS & PAIRINGS ============ -->
+<section>
+  <div class="wrap two-col">
+    <div class="panel">
+      <h3><svg width="20" height="20" viewBox="0 0 60 60"><line x1="44" y1="6" x2="30" y2="26" stroke="#8A5A33" stroke-width="4" stroke-linecap="round"/><path d="M30 26 Q14 38 20 52 M30 26 Q22 42 28 54 M30 26 Q30 44 34 54 M30 26 Q40 40 38 52" stroke="#8A5A33" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Tips from our kitchen</h3>
+      <ul>
+        <li><svg width="13" height="13" viewBox="0 0 24 24"><path d="M4 13 l5 5 L20 6" stroke="#9FB07E" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>Use room temperature ingredients</li>
+        <li><svg width="13" height="13" viewBox="0 0 24 24"><path d="M4 13 l5 5 L20 6" stroke="#9FB07E" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>Measure flour the right way (spoon &amp; level!)</li>
+        <li><svg width="13" height="13" viewBox="0 0 24 24"><path d="M4 13 l5 5 L20 6" stroke="#9FB07E" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>Don't overmix the dough</li>
+        <li><svg width="13" height="13" viewBox="0 0 24 24"><path d="M4 13 l5 5 L20 6" stroke="#9FB07E" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>Chill dough when you can — flavor loves patience</li>
+        <li><svg width="13" height="13" viewBox="0 0 24 24"><path d="M4 13 l5 5 L20 6" stroke="#9FB07E" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>Bake with love. Always.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Perfect pairings</h3>
+      <ul>
+        <li class="pairing"><span>Warm cookie</span><em>+ cold milk</em></li>
+        <li class="pairing"><span>Lemon crinkle cookie</span><em>+ hot tea</em></li>
+        <li class="pairing"><span>Warm cinnamon roll</span><em>+ hot coffee</em></li>
+        <li class="pairing"><span>Any bake at all</span><em>+ someone to share it with ♡</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="note">
+    <div class="eyebrow" style="margin-bottom:12px">A note from Ashley ♡</div>
+    <div class="hand">Thank you for supporting our small business and being part of our story. Every cinnamon roll and cookie is made with intention, gratitude, and a whole lot of heart. We can't wait to bake something sweet for you!</div>
+    <div class="sig">With love, Ashley</div>
+  </div>
+  <div class="foot-meta">Sweet Somethings · Small-batch home bakery · <a href="https://www.instagram.com/sweetsomethingsbaking" target="_blank" rel="noopener noreferrer">Follow on Instagram for weekly market info</a></div>
+  <div class="foot-tag">Real food · Real connections · Real goodness</div>
+</footer>
+
+</body>
+</html>

@@ -22,11 +22,9 @@ which makes it perfect for free hosting on **GitHub Pages**.
 ## How to publish on GitHub Pages (free)
 
 1. **Create a GitHub account** (if you don’t have one) at <https://github.com> — then sign in.
-1. **Create a new repository.**
-   Click the **+** in the top-right → **New repository**.
-- Name it `sweet-somethings` (or anything you like)
-- Set it to **Public** (required for free GitHub Pages)
-- Click **Create repository**
+1. **Use the current repository.**
+  Repo: <https://github.com/sweetsomethings/sweetsomethings>
+- Keep it **Public** (required for free GitHub Pages)
 1. **Upload the site file.**
    On the new repo page, click **uploading an existing file**,
    drag in `index.html`, and click **Commit changes**.
@@ -35,15 +33,11 @@ which makes it perfect for free hosting on **GitHub Pages**.
 - Under **Source**, choose **Deploy from a branch**
 - Branch: **main**, Folder: **/ (root)**
 - Click **Save**
-1. **Visit your site.** After a minute or two, your site will be live at:
-   `https://YOUR-USERNAME.github.io/sweet-somethings/`
-   (The Pages settings screen will show the exact URL.)
-1. **Make text-message previews work (one quick edit).**
-   Link previews in SMS/iMessage need the *full* web address of the preview
-   image. Open `index.html` on GitHub (pencil icon), find the three lines
-   marked `<!-- UPDATE ME -->` near the top, and replace
-   `YOUR-USERNAME` with your actual GitHub username (and the repo name if
-   you chose a different one). Commit the change.
+1. **Visit your site.** After a minute or two, your site is live at:
+  `https://sweetsomethings.github.io/sweetsomethings/`
+1. **Link previews are already configured.**
+  Open Graph and Twitter image URLs in `index.html` now point to the live
+  GitHub Pages site and image path.
 - The favicon works immediately with no edits needed.
 - Note: messaging apps cache previews, so if you text the link before
   making this edit, it can take a while (or a fresh conversation) for
